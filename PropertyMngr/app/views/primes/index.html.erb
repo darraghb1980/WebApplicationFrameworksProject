@@ -1,0 +1,23 @@
+<h1>Listing primes</h1>
+
+<table>
+  <tr>
+    <th>Primenum</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @primes.each do |prime| %>
+  <tr>
+    <td><%= prime.primenum %></td>
+    <td><%= link_to 'Show', prime %></td>
+    <td><%= link_to 'Edit', edit_prime_path(prime) %></td>
+    <td><%= link_to 'Destroy', prime, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prime', new_prime_path %>

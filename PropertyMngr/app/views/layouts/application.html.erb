@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PropertyMngr</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1>Property Management </h1>
+			
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="/developments">Homepage</a></li>
+				<li><a href="/voting">Voting Rights</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/owners">Owners Details</a></li>
+				<li><a href="/devlist">Developments</a></li>
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="/check">Prime</a></li>
+			</ul>
+		</div>
+
+	</div>
+	
+<%= yield :head %>
+<%= yield %>
+<%= yield :scripts %>
+			
+		
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true]
+	"Development" [shape=Mrecord, label="{Development|name :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Unit" [shape=Mrecord, label="{Unit|address1 :string\lcreated_at :datetime\lupdated_at :datetime\llatitude :float\llongitude :float\lgmaps :boolean\lmanagement_fee :integer\lstatus :string\l}"]
+	"Owner" [shape=Mrecord, label="{Owner|firstname :string\llastname :string\lcontact_number :string\lemail :string\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Development" -> "Unit" [arrowtail=crow, arrowhead=dot, dir=both]
+	"Owner" -> "Development" [arrowtail=crow, arrowhead=dot, dir=both]
+	"Owner" -> "Unit" [arrowtail=crow, arrowhead=dot, dir=both]
+}

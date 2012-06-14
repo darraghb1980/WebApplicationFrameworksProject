@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<p> <b>Name:</b> <%= @development.name %></p>
+
+<hr>
+
+<table border=1>
+<tr><td>First Name:</td><td><%= @owner.firstname %></td></tr>
+<tr><td>Last Name:</td><td><%= @owner.lastname %></td></tr>
+<tr><td>Contact Number:</td><td><%= @owner.contact_number %></td></tr>
+<tr><td>Management Fee:</td><td>£<%= @owner.management_fee %></td></tr>
+<tr><td>Payment Status:</td><td><%= @owner.status %></td></tr>
+</table>
+<%= link_to 'Edit', edit_development_path(@development) %> 
+<%= link_to 'Back', developments_path %>

@@ -1,0 +1,37 @@
+<table width="75%" >
+	<tr>
+		<td>
+			<table border = "2">
+				<tr>
+					<th>Unit Address</th><th></th><th>Eligibility</th>
+				</tr>
+				<% @eligibleunits.each do |unit|%>,
+				<tr>
+					<td><%= unit.address1%></td><td></td><td>Eligible to vote</td></tr>
+				<% end %>
+			</table>
+		</td>
+		<td>
+			<table border = "2">
+				<tr>
+					<th>Owner</th><th></th><th>Eligibility</th>
+				</tr>
+				<% @eligibleowners.each do |owner|%>
+				<tr>
+					<td><%= owner.fullName%></td><td></td><td>Eligible to vote</td></tr>
+				<% end %>
+			</table>
+		</td>
+		<td>
+			<table border = "2">
+				<tr>
+					<th>Owner Name</th><th>Eligibility</th>
+				</tr>
+				<% @uneligibleowners.each do |owner|%>
+				<tr>
+					<td><%= owner.fullName%></td><td>Ineligible to vote</td></tr>
+				<% end %>
+			</table>
+		</td>
+	</tr>
+</table>

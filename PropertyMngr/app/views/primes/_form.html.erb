@@ -1,0 +1,21 @@
+<%= form_for(@prime) do |f| %>
+  <% if @prime.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prime.errors.count, "error") %> prohibited this prime from being saved:</h2>
+
+      <ul>
+      <% @prime.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :primenum %><br />
+    <%= f.text_field :primenum %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

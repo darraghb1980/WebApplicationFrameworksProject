@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  firstname: MyString
+  lastname: MyString
+  contact_number: MyString
+  management_fee: 1
+  status: MyString
+
+two:
+  firstname: MyString
+  lastname: MyString
+  contact_number: MyString
+  management_fee: 1
+  status: MyString

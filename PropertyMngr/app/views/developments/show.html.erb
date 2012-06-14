@@ -1,0 +1,30 @@
+<center><p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @development.name %>
+</p>
+<table>
+  <tr>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @units.each do |unit| %>
+  <tr>
+    <td><%= unit.address1 %></td>
+    <td><%= link_to 'Show', development_unit_path(unit.development,unit) %></td>
+    <td><%= link_to 'Edit', edit_development_unit_path(unit.development,unit) %></td>
+    <td><%= link_to 'Destroy', development_unit_path(unit.development,unit), :confirm => 'Are you sure?', :method => :delete %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Edit', edit_development_path(@development) %> |
+<%= link_to 'Add Unit', new_development_unit_path(@development)%> |
+<%= link_to 'Back', developments_path %></center>

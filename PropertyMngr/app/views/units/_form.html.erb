@@ -1,0 +1,44 @@
+<%= form_for([@development,@unit]) do |f| %>
+  <% if @unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+      <% @unit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address1 %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :owner_id %><br />
+    <%#= f.text_field :owner_id %>
+<%=select("unit", "owner_id", Owner.all.collect {|p| [ p.fullName, p.id ] }, { :include_blank => true })%>
+  </div>
+<div class="field">
+    <%= f.label :management_fee %><br />
+    <%= f.text_field :management_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+   
+<!--drop down box for status-->
+<select name="unit[status]">
+  <option value="" ></option>
+  <option value="DD" >DD</option>
+  <option value="Payment Plan">Payment Plan</option>
+  <option value="Paid in Full">Paid in Full</option>
+  <option value="Default">Default</option>
+</select>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

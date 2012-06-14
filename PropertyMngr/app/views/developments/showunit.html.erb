@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p> <b>Name:</b> <%= @development.name %></p>
+
+<table border=1> 
+<%for unit in @units%>
+<tr><td>Address :</td><td><%= unit.address1 %></td></tr>
+<%end%>
+
+
+</table>
+<%= link_to 'Edit', edit_development_path(@development) %> 
+<%= link_to 'Back', developments_path %>
+

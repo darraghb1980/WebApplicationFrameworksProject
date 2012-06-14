@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @unit.address1 %>
+</p>
+
+
+<p>
+<b>Owner:</b>	<%= @unit.owner.fullName %>
+</p>
+<p>
+<b>Contact Number: </b><%= @unit.owner.contact_number %>
+</p>
+<p>
+<b>Email: </b><%= @unit.owner.email %>
+</p>
+<p>
+<b>Management Fee: </b><%= @unit.management_fee%>
+</p>
+<p>
+<b>Status: </b><%= @unit.status%>
+</p>
+
+<%= link_to 'Edit', edit_development_unit_path(@development,@unit) %> |
+<%= link_to 'Back', development_path(@development) %>
